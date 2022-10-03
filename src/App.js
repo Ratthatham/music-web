@@ -2,7 +2,7 @@ import {Routes, Route} from 'react-router-dom'
 import './App.css';
 
 import {Discover, AroundYou, ArtistDetails, Search, SongDetails, TopArtists, TopCharts} from '../src/pages'
-import MusicPlayer from './components/MusicPlayer/MusicPlayer';
+import MusicPlayer from './components/MusicPlayer';
 
 const App = () => {
   return (
@@ -18,7 +18,7 @@ const App = () => {
           <Route path='/search/:searchTerm' element={<Search/>}/>
         </Routes>
       </div>
-      <div className=' absolute h-28 bottom-0 left-0 right-0 flex bg-gradient-to-br from-white/10 to-[#2a2a80] backdrop-blur-lg rounded-t-3xl '>
+      <div className=' fixed h-28 bottom-0 left-0 right-0 flex bg-gradient-to-br from-white/10 to-[#2a2a80] backdrop-blur-lg rounded-t-3xl '>
         <MusicPlayer/>
       </div>
     </div>
