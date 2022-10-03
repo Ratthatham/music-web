@@ -1,9 +1,13 @@
-import React from "react";
+import { useDispatch, useSelector } from 'react-redux'
+
 import {Error, Loader, SongCard} from '../components'
 import {genres} from '../assets/constants'
 import {useGetTopChartsQuery} from '../redux/services/shazamCore'
 
 const Discover = () => {
+    
+    const {activeSong, isPlaying} = useSelector((state)=>state.player);
+
     const {data, isFetching, error} = useGetTopChartsQuery();
     console.log(data);
 
@@ -30,10 +34,17 @@ const Discover = () => {
                     {genres.map((genre)=> <option key={genre.value} value={genre.title}>{genre.title}</option>)}
                 </select>
             </div>
-            <div className=" text-white flex flex-wrap sm:justify-start justify-center gap-8">
+            <div className=" text-white flex flex-wrap sm:justify-start justify-center gap-8 ">
                 {
-                    [1,2,3,4,5,6].map((song, index)=>(
-                        <SongCard key={song.key} song={song} i={index}/>
+                    data.map((song, index)=>(
+                        <SongCard 
+                            key={song.key} 
+                            song={song} 
+                            i={index}
+                            isPlaying={isPlaying}
+                            activeSong={activeSong}
+                            data={data}
+                            />
                     ))
                 }
             </div>
