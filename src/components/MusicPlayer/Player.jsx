@@ -1,6 +1,6 @@
 
 const Player = () => (
-    <p1>Player</p1>
+    <div>hello</div>
 )
 
 
