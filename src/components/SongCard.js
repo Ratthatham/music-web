@@ -20,7 +20,7 @@ const SongCard = ({song, i, isPlaying, activeSong, data}) => {
     }
 
     return(
-        <div className=' flex flex-col w-[250px] p-4 bg-white bg-opacity-20  backdrop-blur-sm  rounded-lg cursor-pointer select-none'>
+        <div className=' flex flex-col w-[250px] p-4 bg-white bg-opacity-20  backdrop-blur-sm rounded-lg cursor-pointer select-none'>
             <div className='relative w-full h-56 group'>
                 <div className={` absolute inset-0 justify-center items-center bg-black bg-opacity-20 group-hover:flex ${activeSong?.title === song.title? 'flex bg-black bg-opacity-70':'hidden'}`}>
                     <PlayPause 
@@ -29,10 +29,12 @@ const SongCard = ({song, i, isPlaying, activeSong, data}) => {
                         isPlaying={isPlaying}
                         activeSong={activeSong}
                         song={song}
+                        size={50}
                     />
                 </div>
-                <img className=' w-full h-56' src={song.images.coverart} alt='song_img'/>
+                <img className=' w-full h-full rounded-lg' src={song.images.coverart} alt='song_img'/>
             </div>
+            
             <div className=' mt-4 flex flex-col'>
                 <p className=' font-semibold text-lg text-white truncate'>
                     <Link to={`/songs/${song.key}`}>
