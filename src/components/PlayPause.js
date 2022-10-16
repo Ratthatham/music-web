@@ -1,13 +1,13 @@
 import {AiFillPlayCircle, AiFillPauseCircle } from 'react-icons/ai'
 
-const PlayPause = ({song, handlePause, handlePlay, isPlaying, activeSong}) => (
+const PlayPause = ({song, handlePause, handlePlay, isPlaying, activeSong, size}) => (
     isPlaying && activeSong.title === song.title? 
         (<AiFillPauseCircle 
-            size={50}
+            size={size}
             className='text-gray-300'
             onClick={handlePause}/> )
         : (<AiFillPlayCircle 
-            size={50}
+            size={size}
             className='text-gray-300'
             onClick={handlePlay}/>)
 )
