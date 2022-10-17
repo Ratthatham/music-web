@@ -10,10 +10,10 @@ const App = () => {
   const {activeSong} = useSelector((state)=>state.player);
 
   return (
-    <div className=' relative flex'>
+    <div className=' relative flex '>
         <SideBar/>
       <div className=" px-6 h-[calc(100vh-72px)] overflow-y-scroll flex xl:flex-row  flex-col-reverse">
-        <div className=" flex-1 h-fit pb-40 ">
+        <div className=" xl:w-[70vw] sm:w-full h-fit pb-40 ">
             <Routes>
               <Route path='/' element={<Discover/>}/>
               <Route path='/top-artists' element={<TopArtists/>}/>
