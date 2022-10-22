@@ -12,7 +12,7 @@ import { FreeMode } from 'swiper';
 
 const TopPlay = () => {
     const dispatch = useDispatch();
-    const {isActive, isPlaying, activeSong} = useSelector((state)=>state.player)
+    const {isPlaying, activeSong} = useSelector((state)=>state.player)
     const {data, isFetching, isError} = useGetTopChartsQuery();
     const topPlayers = data?.slice(0,5);
     const topTenArtists = data?.slice(0,10);
@@ -21,11 +21,11 @@ const TopPlay = () => {
     
     const TopChartCard = ({song, i, isPlaying, activeSong, data}) => {
         
-        const handlePause = () => {
+        const handlePauseClick = () => {
             dispatch(playPause(false))
         }
     
-        const handlePlay = () => {
+        const handlePlayClick = () => {
             dispatch(setActiveSong({song, data, i}));
             dispatch(playPause(true))
         }
@@ -44,8 +44,8 @@ const TopPlay = () => {
                     </div>
                     <PlayPause 
                         song={song}
-                        handlePlay={handlePlay}
-                        handlePause={handlePause}
+                        handlePlayClick={handlePlayClick}
+                        handlePauseClick={handlePauseClick}
                         isPlaying={isPlaying}
                         activeSong={activeSong}
                         size={30}

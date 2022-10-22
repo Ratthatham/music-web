@@ -1,4 +1,4 @@
-import Sidebar from '../components/SideBar';
+import SideBar from './SideBar';
 import Searchbar from '../components/SearchBar';
 import SongCard from '../components/SongCard';
 import TopPlay from '../components/TopPlay';
@@ -6,20 +6,22 @@ import ArtistCard from './ArtistCard';
 import DetailsHeader from './DetailsHeader';
 import SongBar from './SongBar';
 import RelatedSongs from './RelatedSongs';
-// import MusicPlayer from '../components/MusicPlayer';
+import MusicPlayer from '../components/MusicPlayer/index.jsx';
 import Loader from './Loader';
 import Error from './Error';
+import PlayPause from './PlayPause'
 
 export {
   TopPlay,
-  Sidebar,
+  SideBar,
   SongCard,
   Searchbar,
   ArtistCard,
   DetailsHeader,
   SongBar,
   RelatedSongs,
-  // MusicPlayer,
+  MusicPlayer,
   Loader,
   Error,
+  PlayPause
 };

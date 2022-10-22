@@ -10,11 +10,11 @@ import PlayPause from '../components/PlayPause';
 
 const SongCard = ({song, i, isPlaying, activeSong, data}) => {
     const dispatch = useDispatch();
-    const handlePause = () => {
+    const handlePauseClick = () => {
         dispatch(playPause(false))
     }
 
-    const handlePlay = () => {
+    const handlePlayClick = () => {
         dispatch(setActiveSong({song, data, i}));
         dispatch(playPause(true))
     }
@@ -24,8 +24,8 @@ const SongCard = ({song, i, isPlaying, activeSong, data}) => {
             <div className='relative w-full h-56 group'>
                 <div className={` absolute inset-0 justify-center items-center bg-black bg-opacity-20 group-hover:flex ${activeSong?.title === song.title? 'flex bg-black bg-opacity-70':'hidden'}`}>
                     <PlayPause 
-                        handlePause = {handlePause} 
-                        handlePlay={handlePlay}
+                        handlePauseClick = {handlePauseClick} 
+                        handlePlayClick={handlePlayClick}
                         isPlaying={isPlaying}
                         activeSong={activeSong}
                         song={song}
