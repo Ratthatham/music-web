@@ -1,7 +1,7 @@
 import React from "react";
 import SongBar from "./SongBar";
 
-const RelatedSongs = ({data, isPlaying, activeSong, handlePauseClick, handlePlayClick, artistId}) => {
+const RelatedSongs = ({data, isPlaying, activeSong, artistId}) => {
     return(
         <div className=" flex flex-col ml-10">
             <h1 className=" font-bold text-2xl text-white "> Related Songs</h1>
