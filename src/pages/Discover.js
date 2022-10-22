@@ -36,7 +36,7 @@ const Discover = () => {
                     {genres.map((genre)=> <option key={genre.value} value={genre.title}>{genre.title}</option>)}
                 </select>
             </div>
-            <div className=" text-white flex flex-wrap sm:justify-start justify-center gap-8 ">
+            <div className=" text-white flex flex-wrap sm:justify-start justify-center gap-8 ml-10 ">
                 {
                     data.map((song, index)=>(
                         <SongCard 
@@ -46,7 +46,7 @@ const Discover = () => {
                             isPlaying={isPlaying}
                             activeSong={activeSong}
                             data={data}
-                            />
+                        />
                     ))
                 }
             </div>
