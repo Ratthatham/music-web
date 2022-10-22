@@ -1,8 +1,6 @@
 import { useSelector } from "react-redux";
-import { useGetSongByCountryQuery, useGetTopChartsQuery } from "../redux/services/shazamCore";
+import { useGetTopChartsQuery } from "../redux/services/shazamCore";
 import {Loader, Error, SongCard} from '../components';
-import { data } from "autoprefixer";
-
 
 const TopCharts = () => {
     const {activeSong, isPlaying} = useSelector((state) => state.player);
