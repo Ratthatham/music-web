@@ -4,15 +4,15 @@ import {FiSearch} from 'react-icons/fi'
 
 
 const SearchBar = () => {
-    const [value, setValue] = useState('')
+    const [searchField, setSearchField] = useState('')
+    
 
-    const handleSearchValue = (event) => (
-        setValue(event.target.value)
-        
+    const handleSearchField = (event) => (
+        setSearchField(event.target.value)     
     )
 
     return(
-        <form autoComplete="off" className="p-2 text-gray-400 focus-within:text-gray-600">
+        <form autoComplete="off" className=" ml-10 m-5 text-gray-400 focus-within:text-gray-600">
             <label htmlFor="search-field" className=" sr-only">
                 Search all songs
             </label>
@@ -23,9 +23,10 @@ const SearchBar = () => {
                     autoComplete="off"
                     id="search-field"
                     type="Search"
-                    value={value}
-                    onChange={handleSearchValue}
-                    className=" bg-gray-200 border-none outline-none placeholder-white text-base text-black pl-2 p-1 rounded-full ml-2"
+                    value={searchField}
+                    onChange={handleSearchField}
+                    placeholder='Search'
+                    className=" bg-transparent border-gray-300 outline-none placeholder-white text-base text-white pl-2 p-1 rounded-full ml-2"
                 />
             </div>
         </form>
