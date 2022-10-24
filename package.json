@@ -1,6 +1,6 @@
 {
   "name": "my-music-web",
-  "homepage": "https://ratthatham.github.io/",
+  "homepage": "https://ratthatham.github.io/music-web",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,6 +9,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.1.3",
+    "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
