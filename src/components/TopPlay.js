@@ -10,7 +10,7 @@ import ChartCard from "./ChartCard";
 
 const TopPlay = () => {
     const {isPlaying, activeSong} = useSelector((state)=>state.player)
-    const {data, isFetching, isError} = useGetTopChartsQuery();
+    const {data} = useGetTopChartsQuery();
     const topPlayers = data?.slice(0,5);
     const topTenArtists = data?.slice(0,10);
     
