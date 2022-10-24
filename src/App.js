@@ -1,9 +1,8 @@
 import {Routes, Route} from 'react-router-dom'
-import './App.css';
 import { useSelector } from 'react-redux';
-
 import {Discover, AroundYou, ArtistDetails, Search, SongDetails, TopArtists, TopCharts} from '../src/pages'
 import { TopPlay, SideBar, MusicPlayer, Searchbar } from './components';
+import './App.css';
 
 
 const App = () => {
@@ -14,7 +13,6 @@ const App = () => {
         <SideBar/>
       <div className="flex-1 flex flex-col bg-gradient-to-br from-black to-[#272729]">
           <Searchbar/>
-        
         <div className=" px-6 h-[calc(100vh)] overflow-y-scroll flex xl:flex-row  flex-col-reverse">
           <div className=" xl:w-[70vw] sm:w-full h-fit pb-40 ">
               <Routes>
