@@ -16,12 +16,12 @@ const App = () => {
         <div className=" px-6 h-[calc(100vh)] overflow-y-scroll flex xl:flex-row  flex-col-reverse">
           <div className=" xl:w-[70vw] sm:w-full h-fit pb-40 ">
               <Routes>
-                <Route path='/' element={<Discover/>}/>
-                <Route path='/top-artists' element={<TopArtists/>}/>
-                <Route path='/top-charts' element={<TopCharts/>}/>
-                <Route path='/around-you' element={<AroundYou/>}/>
-                <Route path='/songs/:songid' element={<SongDetails/>}/>
-                <Route path='/search/:searchTerm' element={<Search/>}/>
+                <Route path='/music-web/' element={<Discover/>}/>
+                <Route path='/music-web/top-artists' element={<TopArtists/>}/>
+                <Route path='/music-web/top-charts' element={<TopCharts/>}/>
+                <Route path='/music-web/around-you' element={<AroundYou/>}/>
+                <Route path='/music-web/songs/:songid' element={<SongDetails/>}/>
+                <Route path='/music-web/search/:searchTerm' element={<Search/>}/>
               </Routes>
           </div>
           <div className='xl:sticky relative top-0 h-fit'>
